@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shruti Rachmale Portfolio</title>
+<style>
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    background: #0a0a0a;
+    color: #eee;
+    line-height: 1.6;
+  }
+
+  a {
+    color: #61dafb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: #21a1f1;
+  }
+
+  header {
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #111 0%, #222 100%);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  #profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #61dafb;
+    box-shadow: 0 0 10px #61dafb88;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  nav {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  nav a {
+    border: 2px solid #61dafb;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  nav a:hover,
+  nav a.active {
+    background: #61dafb;
+    color: #0a0a0a;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  section {
+    display: none;
+  }
+
+  section:target {
+    display: block;
+  }
+
+  section:first-of-type {
+    display: block;
+  }
+
+  section h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid #61dafb;
+    margin-bottom: 1.2rem;
+  }
+
+  .skills-list, .card-container, .hobby-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+
+  .skill, .card, .hobby-item {
+    background: #121212;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(97,218,251,0.3);
+  }
+
+  .skill {
+    color: #61dafb;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+  }
+
+  .card h3, .hobby-item h3 {
+    color: #61dafb;
+    margin-bottom: 0.5rem;
+  }
+
+  .card p, .hobby-item p {
+    color: #ccc;
+    font-size: 0.95rem;
+  }
+
+  .hobby-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 0.8rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #555;
+    border-top: 1px solid #222;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+    nav {
+      margin: 1rem 0 0;
+      justify-content: center;
+    }
+    nav a {
+      padding: 0.5rem 0.8rem;
+      font-size: 0.85rem;
+    }
+    .skills-list, .card-container, .hobby-list {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="profile.jpg" alt="Shruti Rachmale" id="profile-pic" />
+  <div>
+    <h1>Shruti Rachmale</h1>
+    <p>1st Year Engineering Student | Aspiring Web Developer</p>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#scores">Scores</a>
+    <a href="#values">Values</a>
+    <a href="#hobbies">Hobbies</a>
+  </nav>
+</header>
+
+<main>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Shruti, a passionate 1st-year engineering student eager to build meaningful web experiences. I love learning new technologies and applying them to real projects. My journey began with web development and expanded to data science and cloud computing. Off the screen, I enjoy cycling, movies, and good books.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">Python</span>
+      <span class="skill">AWS Basics</span>
+      <span class="skill">Tableau</span>
+      <span class="skill">Linux</span>
+      <span class="skill">Cisco</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Banking App</h3>
+        <p>Built a full-stack banking web application handling customer transactions and accounts using React & Node.js.</p>
+      </div>
+      <div class="card">
+        <h3>AWS EBS Deployment</h3>
+        <p>Configured and deployed web servers on AWS EBS with automated backups and monitoring.</p>
+      </div>
+      <div class="card">
+        <h3>FIFA Data Analysis</h3>
+        <p>Analyzed FIFA player data (2015-2022) using Pandas and NumPy to uncover trends and insights.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>CCNA</h3>
+        <p>Completed Cisco Certified Network Associate focusing on networking and security fundamentals.</p>
+      </div>
+      <div class="card">
+        <h3>Linux Essentials</h3>
+        <p>Covered Linux CLI, shell scripting, and system basics.</p>
+      </div>
+      <div class="card">
+        <h3>NASSCOM Future Skills</h3>
+        <p>Completed several beginner courses in digital and cloud technologies.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scores">
+    <h2>Scores</h2>
+    <div class="card-container">
+      <div class="card"><h3>10th Grade</h3><p>99.20%</p></div>
+      <div class="card"><h3>12th Grade</h3><p>70%</p></div>
+      <div class="card"><h3>JEE Mains</h3><p>85 Percentile</p></div>
+      <div class="card"><h3>NEET</h3><p>507 Marks</p></div>
+      <div class="card"><h3>MHT CET</h3><p>94.85 Percentile</p></div>
+    </div>
+  </section>
+
+  <section id="values">
+    <h2>Values</h2>
+    <p>I believe in continuous learning, integrity, and perseverance. Every day is an opportunity to grow and make meaningful contributions. My work aims to be user-friendly, accessible, and impactful while fostering innovation and teamwork.</p>
+  </section>
+
+  <section id="hobbies">
+    <h2>Hobbies</h2>
+    <div class="hobby-list">
+      <div class="hobby-item">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=120&q=80" alt="Cycling">
+        <h3>Cycling</h3>
+        <p>Love exploring new routes while staying fit and connected with nature.</p>
+      </div>
+      <div class="hobby-item">
+        <img src="https://images.unsplash.com/photo-1517602302552-471fe67acf66?auto=format&fit=crop&w=120&q=80" alt="Movies">
+        <h3>Movies</h3>
+        <p>Inspires me with storytelling, creativity, and new perspectives.</p>
+      </div>
+      <div class="hobby-item">
+        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=120&q=80" alt="Books">
+        <h3>Reading</h3>
+        <p>Fuel for curiosity and wisdom — I enjoy both fiction and non-fiction.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Shruti Rachmale. All rights reserved.
+</footer>
+
+</body>
+</html>
